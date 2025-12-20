@@ -1,36 +1,23 @@
 // Frontend\src\components\Header\index.jsx
 
-// src\components\Header\index.jsx
-
-import { NavLink, Link } from 'react-router-dom'
-import './style.css'
-import logo from '../../assets/mc.gif'
-
+import React from 'react';
+import './style.css';
 
 function Header() {
   return (
-    <header className="header">
-      <div className="header_wrap">
-        <Link to='/' className='brand'>
-          <img src={logo} alt="Logo" className='logo'/>
-          <span>McDonald's</span>
-        </Link>
-
-        <nav className='nav'>
-          <NavLink to='/servicos' className={({ isActive }) => isActive ? 'link active' : 'link'}>
-            Serviços
-          </NavLink>
-          <NavLink to='/sobre-nos' className={({ isActive }) => isActive ? 'link active' : 'link'}>
-            Sobre Nós
-          </NavLink>
-          <NavLink to='/fale-conosco' className={({ isActive }) => isActive ? 'link active' : 'link'}>
-            Fale Conosco
-          </NavLink>
-        </nav>
-      </div> {/* Fechar a div header_wrap */}
+    <header className="header-container">
+      <div className="brand">
+        <h1>BANCADA McDONALDS</h1>
+      </div>
+      
+      <nav className="nav-menu">
+        <a href="#home" className="nav-link">Home</a>
+        <a href="#sobre" className="nav-link">Sobre Nós</a>
+        <a href="#servicos" className="nav-link">Serviços</a>
+      </nav>
     </header>
   );
 }
 
-export default Header
+export default Header;
     
