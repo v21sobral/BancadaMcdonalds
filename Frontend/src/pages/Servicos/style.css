@@ -1,0 +1,74 @@
+/* Frontend\src\pages\Servicos\style.css */
+
+/* src\pages\Servicos\style.css */
+
+.servicos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.servicos h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #dfbd00;
+}
+
+.servicos p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #b0b0b0;
+}
+
+.qrcode {
+  display: flex;
+  justify-content: center; /* alinha horizontalmente */
+  align-items: center; /* alinha verticalmente */
+  gap: 1rem; /* espaço entre imagem e texto */
+  margin: 2rem 0;
+}
+
+.qrcode img {
+  width: 120px; /* ajuste conforme necessário */
+  height: auto;
+}
+
+.qrcode h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 400px; /* evita que o texto fique muito longo */
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #202020;
+  box-shadow: 0 4px 6px rgba(4, 134, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
