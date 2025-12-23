@@ -1,8 +1,8 @@
 /* Frontend\src\components\Footer\style.css */
 
 .footer {
-  background: linear-gradient(90deg, var(--primary-red), #b00f22);
-  color: var(--white);
+  background: linear-gradient(180deg, rgb(141, 0, 0), #f8d300);
+  color: black;
   padding: 2rem 0;
   margin-top: 2rem;
 }
