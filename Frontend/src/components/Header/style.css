@@ -13,7 +13,7 @@
 }
 
 .brand h1 {
-  color: var(--white);
+  color: whitesmoke;
   font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -25,7 +25,7 @@
 }
 
 .nav-link {
-  color: var(--white);
+  color: whitesmoke;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
