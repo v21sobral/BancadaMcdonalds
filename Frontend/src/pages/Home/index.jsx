@@ -11,8 +11,8 @@ function Home() {
       <section className="home-text-section">
         <h2 className="home-title">Qualidade que<br/>você confia.</h2>
         <p className="home-subtitle">
-          Bem-vindo ao novo sistema Bancada McDonald's. 
-          Gerencie seus pedidos e serviços com rapidez, eficiência e o padrão de qualidade que todos amam.
+          Bem-vindo a Bancada MequiDonalds. 
+          Profissionais de TI frustrados pelo mercado de trabalho.
         </p>
         <button className="btn-primary">Começar Agora</button>
       </section>

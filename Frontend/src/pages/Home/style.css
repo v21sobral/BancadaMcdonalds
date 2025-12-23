@@ -3,7 +3,7 @@
 .home-wrapper {
   background-color: var(--white);
   min-height: calc(100vh - 80px); /* Altura total menos o header */
-  padding: 4rem;
+  padding: 4rem 0 4rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start; /* Alinha itens ao topo */
@@ -55,9 +55,9 @@
 /* Imagem de Identificação */
 .home-image-section {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: flex-start;
-  margin-right: 2rem;
+  flex: 0 0 auto;
 }
 
 .site-id-image {

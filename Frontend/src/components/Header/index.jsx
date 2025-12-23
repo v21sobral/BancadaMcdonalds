@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="header-container">
       <div className="brand">
-        <h1>BANCADA McDONALDS</h1>
+        <h1>BANCADA MequiDonalds</h1>
       </div>
       
       <nav className="nav-menu">
