@@ -9,9 +9,9 @@ function Home() {
   return (
     <main className="home-wrapper">
       <section className="home-text-section">
-        <h2 className="home-title">Qualidade que<br/>você confia.</h2>
+        <h2 className="home-title">Eu sou o pretérito imperfeito,<br/>eu sou SENAI.</h2>
         <p className="home-subtitle">
-          Bem-vindo a Bancada MequiDonalds. 
+          Bem-vindo a Bancada MequiDonalds.
           Profissionais de TI frustrados pelo mercado de trabalho.
         </p>
         <button className="btn-primary">Começar Agora</button>

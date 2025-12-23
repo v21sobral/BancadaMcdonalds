@@ -1,9 +1,9 @@
 :root {
   /* Paleta de Cores */
-  --primary-red: #DA291C;    /* Vermelho vibrante */
-  --primary-yellow: #FFC72C; /* Amarelo característico */
-  --white: #FFFFFF;
-  --bg-light: #F9F9F9;
+  --primary-red: #b62217;    /* Vermelho vibrante */
+  --primary-yellow: #ff0000; /* Amarelo característico */
+  --white: #fac000;
+  --bg-light: #8f0101;
   --text-dark: #333333;
   
   /* Configurações de Fonte */
@@ -14,6 +14,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita scroll horizontal */
+  
 }
 
 body {
@@ -38,9 +45,11 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 0rem;
 }
 
 main {
   background: var(--bg-light);
+  margin: 0;
+  padding: 0;
 }

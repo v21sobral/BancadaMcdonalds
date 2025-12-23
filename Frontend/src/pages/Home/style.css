@@ -2,19 +2,20 @@
 
 .home-wrapper {
   background-color: var(--white);
-  min-height: calc(100vh - 80px); /* Altura total menos o header */
-  padding: 4rem 0 4rem 4rem;
+  min-height:0%;
+  padding: 0rem 0 0rem 0rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Alinha itens ao topo */
+  align-items: flex-start;
   position: relative;
-  overflow-x: hidden;
-  flex-direction: row-reverse; /* Inverte a ordem: imagem esquerda, texto direita */
+  overflow: visible; /* Permite que a imagem ultrapasse */
+  flex-direction: row-reverse;
+  margin: 0 0 0 0; /* Compensa possíveis margens do body */
+  width: 99.4vw;
 }
-
 /* Área de Texto */
 .home-text-section {
-  max-width: 50%;
+  max-width: 100%;
   margin-top: 40px;
 }
 
@@ -36,7 +37,7 @@
 /* Botão de Ação (CTA) Moderno */
 .btn-primary {
   background-color: var(--primary-yellow);
-  color: var(--primary-red);
+  color: whitesmoke;
   padding: 15px 40px;
   font-size: 1.2rem;
   font-weight: bold;
