@@ -8,7 +8,7 @@ function SobreNos() {
     return (
         
         <section className='sobre-nos'>
-            <h1>Sobre nós</h1>
+            <h1>Sobre Nós</h1>
             <p>Somos uma empresa de gestão de entregas dedicada a fornecer soluções eficientes e confiáveis para o controle de entregas. Nossa missão é garantir a segurança, a confiança e a satisfação de nossos clientes, independentemente do tamanho ou do tipo de negócio.</p>    
             <ul>
                 <li>Pioneiro no mercado</li>
