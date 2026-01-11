@@ -35,65 +35,59 @@ const slides = [
 ];
 
 function Carousel() {
-  console.log('extendedSlides:', [...slides.slice(-4), ...slides, ...slides.slice(0, 4)]);
   const visibleSlides = 4;
   const total = slides.length;
-  // Duplicar slides para efeito infinito
+  // Duplicar slides para efeito infinito perfeito
   const extendedSlides = [...slides.slice(-visibleSlides), ...slides, ...slides.slice(0, visibleSlides)];
   const [current, setCurrent] = useState(visibleSlides);
   const [transition, setTransition] = useState(true);
   const slideRef = useRef();
 
-  // Autoplay: avança automaticamente a cada 3 segundos
-  // Autoplay: reinicia o intervalo sempre que current muda para garantir looping perfeito
+  // Autoplay: avança automaticamente a cada 4 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => prev + 1);
-      setTransition(true);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
-  }, [current]);
+  }, []);
+
+  // Monitora mudanças de posição para loop infinito
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (current >= extendedSlides.length - visibleSlides) {
+        // Chegou no final, volta ao início
+        setTransition(false);
+        setCurrent(visibleSlides);
+      } else if (current < visibleSlides && current !== visibleSlides) {
+        // Chegou no início, vai ao final
+        setTransition(false);
+        setCurrent(extendedSlides.length - visibleSlides - 1);
+      } else {
+        // Restaura transição para slides normais
+        setTransition(true);
+      }
+    }, 500); // Tempo igual à transição CSS
+
+    return () => clearTimeout(timer);
+  }, [current, extendedSlides.length]);
 
   const nextSlide = () => {
-    if (current === extendedSlides.length - visibleSlides - 1) {
-      setTransition(false);
-      setCurrent(visibleSlides);
-      // Forçar reflow para garantir o reset instantâneo
-      setTimeout(() => {
-        setTransition(true);
-        setCurrent(visibleSlides + 1);
-      }, 20);
-    } else {
-      setCurrent((prev) => prev + 1);
-      setTransition(true);
-      
-    }
+    setCurrent((prev) => prev + 1);
+    setTransition(true);
   };
 
   const prevSlide = () => {
-    if (current === 1) {
-      setTransition(false);
-      setCurrent(total);
-      setTimeout(() => {
-        setTransition(true);
-        setCurrent(total - 1);
-      }, 20);
-    } else {
-      setCurrent((prev) => prev - 1);
-      setTransition(true);
-    }
+    setCurrent((prev) => prev - 1);
+    setTransition(true);
   };
 
-
-  // Ao terminar a transição, faz o teleporte se necessário
   const handleTransitionEnd = () => {
-    if (current === extendedSlides.length - visibleSlides) {
+    if (current >= extendedSlides.length - visibleSlides) {
       setTransition(false);
       setCurrent(visibleSlides);
-    }
-    if (current === 0) {
+    } else if (current <= 0) {
       setTransition(false);
-      setCurrent(total);
+      setCurrent(extendedSlides.length - visibleSlides - 1);
     }
   };
 
