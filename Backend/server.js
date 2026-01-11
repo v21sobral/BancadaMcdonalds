@@ -50,7 +50,7 @@ const app = express(); // INICIALIZA O EXPRESS
 app.use(cors()); // PERMITE QUE API ACEITE CONEXÃO DO FRONT-END.
 app.use(express.json()); // HABILITA O EXPRESS PARA ENTENDER REQUISIÇÕES COM JSON;
 
-const port = 3000; // PORTA QUE A APLICAÇÃO VAI RODAR
+const port = process.env.PORT || 3000; // PORTA QUE A APLICAÇÃO VAI RODAR
 
 // Middleware para autenticação JWT
 const SECRET = 'segredo_super_secreto'; // Em produção, use variável de ambiente
