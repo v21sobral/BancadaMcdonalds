@@ -17,7 +17,8 @@ function Home({ onLogin, usuario }) {
   const team = [
     { name: 'Fernanda Dantas', role: 'Full Stack ChatGPT', img: nandamcdonaldsImg, github: 'https://github.com/fernanddadantasm' },
     { name: 'Sara Melo', role: 'Full Stack Gemini', img: saramcdonaldsImg, github: 'https://github.com/sahmlo' },
-    { name: 'Victor Sobral', role: 'Full Stack Claude', img: victormcdonaldsImg, github: 'https://github.com/v21sobral' }
+    { name: 'Victor Sobral', role: 'Full Stack Claude', img: victormcdonaldsImg, github: 'https://github.com/v21sobral' },
+    { name: 'Alessandra', role: 'Equipe SENAI', img: alessandrafinalImg, github: '#' }
   ];
 
   return (
