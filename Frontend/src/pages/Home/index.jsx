@@ -6,6 +6,7 @@ import mcGif from '../../assets/mc.gif';
 import nandamcdonaldsImg from '../../assets/nandamcdonalds.png';
 import saramcdonaldsImg from '../../assets/saramcdonalds.png';
 import victormcdonaldsImg from '../../assets/victormcdonalds.png';
+import alessandrafinalImg from '../../assets/alessandrafinal.jpg';
 import Carousel from '../../components/Carousel';
 import Login from '../Login';
 import '../login-modal.css';
